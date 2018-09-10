@@ -14,89 +14,138 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
 </head>
 
 <body>
   <!-- Add your site or application content here -->
-  <div id="title">    
-      <h1>Feedback Form</h1>
+  <div id="title">
+    <h1>Feedback Form</h1>
   </div>
   <div id="jumbotron">
     <div id="description">
-  <p>Let us know how we can improve the website!</p>
-      </div>
-<!-- <form id="survey-form">
-  <label id="name-label">Name</label><input id="name" type="text" required="true" placeholder="Enter your Name">
-  <label id="email-label">Email</label><input id="email" type="text" required="true" placeholder="Enter your Email"> 
-  <label id="number-label">Age</label><input id="number" type="text" required="true" min="1" max="10" placeholder="Enter your Age">
-  <label id="dropdown-label"> </label>
-  <label for="checkbox-label">What is your favorite food?</label>
-  <label for="checkbox-label"><input type="checkbox" name="cuisine"> Mediteranean</label>
-  <label for="checkbox-label"><input type="checkbox" name="cuisine"> Italian</label>
-  <label for="checkbox-label"><input type="checkbox" name="cuisine"> Chinese</label>
-  <label for="checkbox-label"><input type="checkbox" name="cuisine"> American</label>
-
-  <div class="dropdown">
-      <button class="dropdown-toggle"  id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Dropdown button
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-        <a class="dropdown-item" href="#">500-1000</a>
-        <a class="dropdown-item" href="#">1000-2000</a>
-        <a class="dropdown-item" href="#">2000-3000</a>
-        <a class="dropdown-item" href="#">>3000</a>
-      </div>
+      <p>Let us know how we can improve the website!</p>
     </div>
 
-  <div id="radio-set">
-  <label for="radio-label">What is your favorite food?</label>
-  <label for="radio-label"><input type="radio" name="cuisine"> Mediteranean</label>
-  <label for="radio-label"><input type="radio" name="cuisine"> Italian</label>
-  <label for="radio-label"><input type="radio" name="cuisine"> Chinese</label>
-  <label for="radio-label"><input type="radio" name="cuisine"> American</label>
-  </div>
-<input type="submit"> 
-</form> -->
-
-<form id="survey-form">
-    <div class="form-group">
-        <label for="userName">*Name</label>
-        <input type="input" class="form-control" id="userName" placeholder="Enter your Name">
+    <form id="survey-form">
+      <div class="form-group">
+        <div class="inputlabel">
+          <label id="name-label"for="userName">*Name</label>
+        </div>
+        <div class="inputbox">
+          <input autofocus id="name" name="name" type="input" class="form-control" required placeholder="Enter your Name">
+        </div>
       </div>
-    <div class="form-group">
-      <label for="userEmail">*Email</label>
-      <input type="email" class="form-control" id="userEmail" placeholder="name@example.com">
-    </div>
-    <div class="form-group">
-        <label for="userAge">*Age</label>
-        <input type="input" class="form-control" id="userAge" placeholder="Enter your Age">
+      <div class="form-group">
+        <div class="inputlabel">
+          <label id="email-label" for="userEmail">*Email</label>
+        </div>
+        <div class="inputbox">
+          <input autofocus id="email" name="email" type="email" class="form-control" :valid required placeholder="name@example.com">
+        </div>
       </div>
-    
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
+      <div class="form-group">
+        <div class="inputlabel">
+          <label id="number-label" for="userAge">*Age</label>
+        </div>
+        <div class="inputbox">
+          <input autofocus id="age" name="number" type="number" class="form-control" min="10" max="99" placeholder="Enter your Age">
+        </div>
+      </div>
 
-    <div class="form-group">
-      <label for="exampleFormControlTextarea1">Example textarea</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
-  </form>
+      <div class="form-group">
+        <div class="inputlabel">
+          <label for="userdish">What is your Favourite Dish?</label>
+        </div>
+        <div class="inputbox">
+          <select class="form-control" id="userdish">
+            <option disabled selected value> select an option </option>
+            <option>Chicken Durmsticks</option>
+            <option>Pho</option>
+            <option>Hawaiian Pizza</option>
+            <option>Veg Biryani</option>
+        </div>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <div class="inputlabel">
+          <label for="userrating">How likely is that you would recommend to a friend?</label>
+        </div>
+        <div class="inputbox">
+          <ul style="list-style: none">
+            <li class="radio">
+              <label>
+                <input name="radio-buttons" value="1" type="radio" class="userRatings"> Definetly
+              </label>
+            </li>
+            <li class="radio">
+              <label>
+                <input name="radio-buttons" value="2" type="radio" class="userRatings"> Maybe
+              </label>
+            </li>
+            <li class="radio">
+              <label>
+                <input name="radio-buttons" value="3" type="radio" class="userRatings"> Not Sure</label>
+            </li>
+          </ul>
+        </div>
+
+        <div class="form-group">
+            <div class="inputlabel">
+              <label for="userrating">Any new dishes you want us to add to the Menu?</label>
+            </div>
+            <div class="inputbox">
+              <ul id="preferences" style="list-style: none">
+                <li class="checkbox">
+                  <label>
+                    <input name="prefer" value="1" type="checkbox" class="userRatings"> Panang Curry
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label>
+                    <input name="prefer" value="2" type="checkbox" class="userRatings"> Mixed Meat Calzone
+                  </label>
+                </li>
+                <li class="checkbox">
+                  <label>
+                    <input name="prefer" value="3" type="checkbox" class="userRatings"> Thawa Malai</label>
+                </li>
+                <li class="checkbox">
+                    <label>
+                      <input name="prefer" value="3" type="checkbox" class="userRatings"> Sheek Kabob</label>
+                  </li>
+                  <li class="checkbox">
+                      <label>
+                        <input name="prefer" value="3" type="checkbox" class="userRatings"> Simply Burger</label>
+                    </li>
+              </ul>
+            </div>
+
+
+        <div class="form-group">
+          <div class="inputlabel">
+            <label for="feedbackText">How can we improve?</label>
+          </div>
+          <div class="inputbox">
+            <textarea class="form-control" id="feedbackText" rows="3" placeholder="Enter your opinion here"></textarea>
+          </div>
+        </div>
+        <button id="submit"> Submit </button>
+    </form>
   </div>
 
   <!-- Cdns -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
-  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
+
 </html>
