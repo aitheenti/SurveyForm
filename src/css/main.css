@@ -87,7 +87,7 @@ input[type="radio" i], input[type="checkbox" i] {
 }
 
 #submit {
-    background-color: #59ace0;
+    background-color: lightgreen;
     border-radius: 7px;
     color: white;
     font-size: 1em;
