@@ -1,0 +1,79 @@
+html body {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 100;
+}
+/* main header styles start*/
+.layoutContainer{
+    display: flex;
+    /* margin: auto; */
+    background-color: #041e42;
+    width: 100%;
+}
+
+.layoutContainer_main {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    clear: both;
+    min-width: 80%;
+}
+
+.layout_header {
+    font-size: 30px;
+    color: #FFF;
+}
+
+.layoutContainer_left{
+    margin-right: 200px;
+}
+
+.layoutContainer_left img {
+    padding-left: 60px;
+}
+/* main header styles end*/
+
+.survey_body_container > * {
+    padding: 25px;
+}
+
+.survey_body_container {
+    display: flex;
+    flex-flow: column wrap;
+    clear: both;
+    margin: 0 auto;
+    max-width: 768px;
+    min-width: 320px; 
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+}
+
+/* rating container styles start */
+.rating_container_layout {
+    display: inline-flex;
+}
+
+.rating_container_layout > * {
+    border: 1px solid #d9d9d9;
+    padding: 20px;
+    border-left: 1px;
+    cursor: pointer;
+}
+.rating_container_layout > *:hover{
+    color: crimson;
+    border: 2px solid #041e42;
+}
+
+.rating_label {
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating_container_layout input[type=checkbox], input[type=radio] {
+    display: none;
+}
+/* rating container styles end */
+
